@@ -10,7 +10,7 @@ class Ciudad:
         return self.nombre
 class Viaje:    
     """La clase esta conformada por dos ciudades: la de salida y la de llegada.
-        La clase se penso para que el cache almacenara un objeto en lugar de dos(que esta conformado por otros dos obejtos),el programa debería funcionar igual con ligeras modificaciones si se decide quitar esta clase
+       La clase esta pensada para que el almacenamiento de los vuelos solo guarde un objeto con 6 atributos y así mejorar la lectura del programa
     """
     def __init__(self,ciudad_salida=" ",ciudad_llegada=" "):
         """Metodo init con el cual se inicializaran los atributos de la clasa"""
