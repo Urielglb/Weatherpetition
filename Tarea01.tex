@@ -1,0 +1,14 @@
+\documentclass[12pt]{article}
+\title{Tarea 1\\Modelado y Programaci\'on\\José de Jesus Galaviz Casas}
+\author{Uriel Garc\'ia Luna Bobadilla}
+\date{}
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \item Definici\'on del problema:\\Crear un algoritmo que dado a lo mas 3 mil viajes en avi\'on (un viaje en avion conformado por ciudad de origen y de destino con sus respectivas latitudes y longitudes) devolviera el clima de la ciudad de origen y de destino al momento en el que se corre el algoritmo
+        \item An\'alisis del problema:\\Para conseguir el clima lo mas conveniente es usar un web service con API de manejo practico, ademas de un manejo de objetos que nos permita reducir la informaci\'on que se guarda y las peticiones que se realicen al web service.\\De igual forma sería conveniente saber explicitamente como se piensa brindar la informaci\'on para leerla o modelar un programa para el uso menos complicado del usuario
+        \item Selecci\'on de alternativa:\\Se decidio hacer el programa en Python pues es un lenguaje que se lleva bien con web service, para este \'ultimo se decidio utilizar Open Weather Map pues tiene un servicio gratuito muy  eficaz ademas de que es sencillo de utilizar.\\En cuanto al  diseño del almacenamiento se decidio crear dos clases, ciudad y viaje; la clase ciudad compuesto por el nombre, latitud y longitud de alguna ciudad y la clase viaje por dos ciudades ciudad de salida y ciudad de llegada 
+        \item Diagrama de flujo: Imagen
+        \item Mantenimiento a futuro:\\El programa puede tener varios cambios o incluso mejoras conforme el tiempo o el cliente lo dese\'e como dar mas información del clima, mejorar el web service a traves de pagos, cambiar de web service, almacenar mas viajes, entre otros.\\El precio que cobraria por el programa seria de aproximadamente 2000 pesos mexicanos y por cualquier mejora o mantenimiento entre 500-600 pesos mexicanos segun sea el caso
+    \end{enumerate}
+\end{document}
