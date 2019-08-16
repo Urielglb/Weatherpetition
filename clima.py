@@ -1,6 +1,6 @@
 import requests
 import json
-import threading 
+from threading import Thread
 url = "http://api.openweathermap.org/data/2.5/forecast?lang=es&lat={}&lon={}&APPID=cbe372f2015158b50591b2f1a8f49f13"#liga con la cual se pedira el clima a Open Weather Map
 respuestas = {}#diccionario que almacenará todos los climas de las ciudades con el nombre de estas como su llave
 
@@ -25,8 +25,11 @@ def pide_clima(ciudad):
 
 def obtener_clima(ciudades):
     """Este método recibe todas las ciudades de las cuales se quiere obtener el clima y abre un hilo que pida el clima de cada ciudad"""
+    lista_de_hilos = []
     for ciudad in ciudades.values():
         peticion_hilo = Thread(target = pide_clima,args = (ciudad,))
         peticion_hilo.start()
-        peticion_hilo.join() 
+        lista_de_hilos.append(peticion_hilo)
+    for hilo in lista_de_hilos:
+        hilo.join()
     return respuestas
