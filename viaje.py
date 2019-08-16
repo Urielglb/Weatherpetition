@@ -6,7 +6,7 @@ class Ciudad:
         self.latitud = latitud
         self.longitud = longitud
     def __str__(self):
-        """Metodo str el cual define la representacion en cadena de la ciudad como el nombre de esta"""
+        """Método str el cual define la representacioón en cadena de la ciudad como el nombre de esta"""
         return self.nombre
 class Viaje:    
     """La clase esta conformada por dos ciudades: la de salida y la de llegada.
@@ -17,5 +17,5 @@ class Viaje:
         self.ciudad_salida = ciudad_salida
         self.ciudad_llegada = ciudad_llegada
     def __str__(self):
-        """Metodo str el cual define la representacion en cadena del viaje como la ciudad de salida-ciudad de llegada del mismo"""
+        """Metodo str el cual define la representación en cadena del viaje como la ciudad de salida-ciudad de llegada del mismo"""
         return "%s-%s" %(self.ciudad_salida,self.ciudad_llegada)
